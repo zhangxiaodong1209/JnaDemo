@@ -1,0 +1,28 @@
+## install g++
+sudo yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/centos-release-scl-rh-2-3.el7.centos.noarch.rpm
+
+sudo yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/centos-release-scl-2-3.el7.centos.noarch.rpm
+
+sudo yum install devtoolset-9-gcc-c++
+
+source /opt/rh/devtoolset-9/enable
+
+
+g++ --version
+
+
+
+## exec sh 
+chmod +x compile.sh
+./compile.sh
+## jna
+nm -D libDemo.so
+## https://www.zhihu.com/question/20330658/answer/2411876597
+## jni
+nm -D libHelloWorld.so
+## http://notes.maxwi.com/2017/04/19/java-jni-cpp-hello/
+
+## jni
+java  -Djava.library.path=. -jar demo1.jar
+## jna
+java  -Djna.library.path=. -Djna.debug_load=true -jar demo1.jar nnn
