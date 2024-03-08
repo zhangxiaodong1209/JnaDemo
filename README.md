@@ -182,6 +182,7 @@ java  -Djava.library.path=. -jar demo1.jar
 java  -Djna.library.path=. -Djna.debug_load=true -jar demo1.jar nnn
 
 - 查看so函数是否正确
+</br>
 nm -D libDemo.so
 </br>
 nm -D libHelloWorld.so
