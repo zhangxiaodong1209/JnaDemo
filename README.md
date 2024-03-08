@@ -176,13 +176,11 @@ g++ -shared -fPIC -o libDemo.so hello.cpp </br>
 
 ##########################执行###############################
 # 命令行执行jar
-# jni
+- jni动态库调用
 java  -Djava.library.path=. -jar demo1.jar
-## jna
+- jna动态库调用
 java  -Djna.library.path=. -Djna.debug_load=true -jar demo1.jar nnn
 
-<h>查看so函数是否正确</h>
+- 查看so函数是否正确
 nm -D libDemo.so
-
-## jni
 nm -D libHelloWorld.so
